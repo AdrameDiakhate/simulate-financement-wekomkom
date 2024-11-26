@@ -1,0 +1,15 @@
+<h1>User Profile</h1>
+
+<% if @user %>
+  <p><strong>Name:</strong> <%= @user["firstname"] %> <%= @user["lastname"] %></p>
+  <p><strong>Email:</strong> <%= @user["email"] %></p>
+  <p><strong>Username:</strong> <%= @user["username"] %></p>
+  <p><strong>Birthday:</strong> <%= @user["birthday"] %></p>
+  <p><strong>Job Title:</strong> <%= @user["job_title"] %></p>
+  <p><strong>City:</strong> <%= @user["city"] %></p>
+  <p><strong>Gender:</strong> <%= @user["gender"] == 1 ? "Male" : "Female" %></p>
+  <p><strong>Age:</strong> <%= @user["age"] %></p>
+  <img src="<%= @user["profile_image"] %>" alt="Profile Image" />
+<% else %>
+  <p>No user found</p>
+<% end %>
